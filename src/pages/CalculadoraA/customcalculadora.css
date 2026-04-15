@@ -1,0 +1,233 @@
+/* ====== LAYOUT PRINCIPAL ====== */
+body {
+  background-color: #f8f9fa;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  background-color: #b91c1c; /* vermelho escuro */
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 70px);
+}
+
+/* ====== CARD ====== */
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+}
+
+.card h2 {
+  text-align: center;
+  color: #b91c1c;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card section {
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* ====== FORM ====== */
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-color: #b91c1c;
+  box-shadow: 0 0 0 2px rgba(185, 28, 28, 0.2);
+}
+
+/* ====== BOTÃO ====== */
+button {
+  background: #b91c1c;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #991b1b;
+}
+
+/* ====== RESULTADO FINAL ====== */
+.resultado {
+  background: #f1f5f9;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.resultado h3 {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.resultado p {
+  margin-bottom: 0.25rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.resultado .preco-final {
+  font-size: 1.1rem;
+  color: #166534;
+  font-weight: 700;
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  height: 90px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+/* 1️⃣ Telas pequenas (celulares até 600px) */
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 0.5rem;
+  }
+
+  header nav a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.25rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input {
+    padding: 0.45rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .resultado {
+    font-size: 0.95rem;
+  }
+}
+
+/* 2️⃣ Telas médias (tablets até 900px) */
+@media (max-width: 900px) {
+  header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav a {
+    margin: 0.3rem 0.6rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
